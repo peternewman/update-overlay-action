@@ -1,0 +1,25 @@
+---
+gitstrap:
+    version: v1
+    github:
+        repo:
+            name: update-overlay-action
+            description: "GitHub action to update Gentoo overlay ebuild files"
+            hooks:
+                - url: "http://p.rehttp.net/http://www.0pdd.com/hook/github"
+                  type: form
+                  events:
+                      - push
+                  active: true
+            collaborators:
+                - "rultor"
+                - "0pdd"
+    templates:
+        - name: "README.md"
+          location: "/home/g4s8/.gitstrap/README.md"
+        - name: "LICENSE"
+          location: "/home/g4s8/.gitstrap/LICENSE.mit"
+    params:
+        rultor: true
+        pdd: true
+        license: MIT
