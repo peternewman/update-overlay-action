@@ -11,4 +11,4 @@ function die {
 [[ "${GITHUB_EVENT_NAME}" != "release" ]] && \
   die "unsupported event: ${GITHUB_EVENT_NAME}"
 
-jq ${GITHUB_EVENT_PATH}
+jq . ${GITHUB_EVENT_PATH}
